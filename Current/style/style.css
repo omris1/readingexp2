@@ -1,0 +1,212 @@
+.first_button {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+
+.first_button:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
+}
+
+.data_button {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 12px;
+    padding: 10px;
+    display: none;
+
+}
+
+
+html, body{
+    background-color: #2a2a2a;
+    color: #e5e5e5;
+    font-size: 22px;
+    text-align: center;
+    font: helvetica;
+    height: 100%; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+html,body {  }
+      
+.container { 
+  height: 100%; 
+  width: 800px; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p, ul {
+    text-align: left;
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 16px 16px 16px;
+  margin: 5px;
+  position: relative;
+  color: rgb(255,255,255);
+  border-radius: 10px;
+  border: 3px solid rgba(0,0,0,0);
+  font-size: 22px;
+  font-family: helvetica;
+}
+
+.button:hover {
+  border: 3px solid rgba(0,0,0,0.3);
+  color: rgb(0,0,0);
+}
+
+
+
+#timeDivRead{ 
+    display: inline;
+    font-weight: bold;
+    color: #0099CC;
+
+
+}
+
+#timeDivSkim {
+    display: inline;
+    font-weight:bold;
+    color: #0099CC;
+}
+
+.questionFooter {
+    text-align: right;
+    font-size: 0.65em;
+}
+
+.answersDiv {
+    text-align: left; 
+}
+
+/* HTML5 Boilerplate accessible hidden styles */
+[type="radio"] {
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  height: 1px; margin: -1px; 
+  overflow: hidden; 
+  padding: 0; 
+  position: absolute; 
+  width: 1px;
+}
+
+/* One radio button per line */
+label {
+  display: block;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+[type="radio"] + span {
+  display: block;
+}
+
+/* the basic, unchecked style */
+[type="radio"] + span:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  border-radius: 1em;
+  border: 0.125em solid #e2e2e2;
+  margin-right: 0.75em;
+  transition: 0.5s ease all;
+}
+
+/* the checked style using the :checked pseudo class */
+[type="radio"]:checked + span:before {
+  background: rgb(44, 162, 95);
+}
+
+/* never forget focus styling */
+[type="radio"]:focus + span:after {
+  content: '\0020';
+  font-size: 1em;
+  line-height: 1;
+  vertical-align: -0.125em;
+}
+
+.imgDone{
+  height: 125px;
+  width: 450px;
+  margin-top: -10px;
+}
+
+.consentHeaders{
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.consentBold{
+  font-weight: bold;
+
+}
+
+#consent{
+  background-color: #e5e5e5;
+    color: #2a2a2a;
+    font-size: 18px;
+    text-align: center;
+    font: helvetica;
+    height: 100%; 
+    margin: 0px; 
+    padding: 10px;
+
+}
+
+#h1Start{
+  margin-top: -10px;
+}
+
+
+#debugFloat {
+    position: fixed;
+    top:27%;
+    left:88%;
+    width:10%; 
+    height:150px; 
+    font-weight: bold; 
+    background-color: rgba(100, 100, 100, 0.9); 
+    color:#e5e5e5; 
+    font: helvetica;
+    font-size:34px; 
+    vertical-align:center; 
+    text-align: center; 
+    z-index:1000; 
+    display:block; 
+    opacity : 0.9;
+    border-radius: 16px;
+    background-clip: border-box;
+    padding: 20px;
+
+    box-shadow: 0px 0px 50px 20px rgba(44, 162, 95, 0.9);
+    border: 3px solid rgba(44, 162, 95, 1);
+    color: rgb(44, 162, 95);
+}
+
+.final{
+  text-align: center;
+}
+

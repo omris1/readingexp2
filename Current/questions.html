@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="style/style.css" rel="stylesheet">
+    <script src="scripts/jquery-2.2.0.min.js"> </script>
+    <script src="scripts/firebase.js"> </script> 
+    <script src="scripts/questions.js"> </script>  
+  </head>
+  <body>
+    <div id="main_wrapper" class="container">
+        <section id="question" style="display: none;">
+            <div id="questionDiv" style="text-align: left;">
+                <span class="questionBody"></span>
+            </div>
+            <br>
+            <div id="answersDiv" class="answersDiv">
+                <label for="ans0">
+                    <input type="radio" value="ans0" name="answers" id="ans0"> <span class="spanAns1">Ans0</span>
+                </label>
+                <label for="ans1">
+                    <input type="radio" value="ans1" name="answers" id="ans1"> <span class="spanAns2">Ans1</span>
+                </label>
+                <label for="ans2">
+                    <input type="radio" value="ans2" name="answers" id="ans2"> <span class="spanAns3">Ans2</span>
+                </label>
+                <label for="ans3">
+                    <input type="radio" value="ans3" name="answers" id="ans3"> <span class="spanAns4">Ans3</span>
+                </label>
+                <label for="ans4">
+                    <input type="radio" value="ans4" name="answers" id="ans4"> <span class="spanAns5">I don't know</span>
+                </label>
+                
+                
+            </div>
+            <div id="buttonDiv">
+                <input type="button" id="nextButton" class="button" value="Next">
+            </div>
+            <div id="questionHeaderDiv" class="questionFooter">
+                <span class="questionId"></span>/<span class="totalQuestions"></span>
+            </div>
+            
+         
+        </section>
+        <div id="questionsInstructionsDiv">       
+            <p>Please answer the following questions about the article you just read.</p>
+            <p>Choose "I don't know" when you are not sure of the correct answer and <u>AVOID GUESSING</u>.</p>
+            <p>When answering questions, stick to the information <u>mentioned in the article</u> rather than your own knowledge.</p>
+            <div id="ShowQuestionButtonDiv">
+                    <input type="button" id="ShowQuestionButton" class="button" value="Next">
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

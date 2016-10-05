@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="style/style.css" rel="stylesheet">
+    <script src="scripts/jquery-2.2.0.min.js"> </script>
+    <script src="scripts/firebase.js"> </script> 
+    <script src="scripts/demograph.js"> </script>  
+  </head>
+  <body>
+    <div id="main_wrapper" class="container">
+    <h2> Before you get started, please tell us a little about your background</h2>
+    <form>
+      What is your age?<br>
+      <select id="age">
+        <option value="-">--select an option--</option>
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-44">35-44</option>
+        <option value="45-54">45-54</option>
+        <option value="55-64">55-64</option>
+        <option value="64+">64+</option>
+      </select>
+      <br><br>
+      What is your gender?<br>
+      <select id ="gender">
+        <option value="-">--select an option--</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Other">Other</option>
+        <option value="Not_disclose">I do not wish to disclose</option>
+      </select>
+      <br><br>
+      What is your highest level of education completed?<br>
+      <select id= "edu">
+        <option value="-">--select an option--</option>
+        <option value="High_School">High School</option>
+        <option value="College">College</option>
+        <option value="Masters">Masters Degree</option>
+        <option value="PhD">PhD</option>
+        <option value="Professional">Professional Degree</option>
+      </select>
+      <br><br>
+      <input type="button" id="demographQ"  value="Submit">
+    </form>
+        
+    </div>
+  </body>
+</html>

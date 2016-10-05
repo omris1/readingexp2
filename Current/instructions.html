@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="style/style.css" rel="stylesheet">
+    <script src="scripts/jquery-2.2.0.min.js"> </script>
+    <script src="scripts/instructions.js"> </script> 
+
+  </head>
+  <body>
+    <div id="main_wrapper" class="container">
+        <section id="instructions">
+        <div id="firstInstructionsDiv" style="display: none;">
+            <header>
+                <h1></h1>
+            </header>
+            <p>
+            A news article will appear on the next page. Please read it in its entirety without:
+            </p>
+            <ul>
+                <li>re-reading sentences</li>
+                <li>memorizing details</li>
+                <li>pacing yourself</li>
+                <li>clicking on links</li>
+            </ul>
+            <p><i><b>As soon as you are done reading</b></i> click the <span style="color: rgb(44, 162, 95);">'DONE'</span> button, which will look as follows:</p>
+            <img class= "imgDone" src="images/done.png" />
+        </div>        
+        <div id="skimInstructionsDiv" style="display: none;">
+            <header>
+                <h1>Please <span style="color: rgb(253, 207, 22);">SKIM</span> the next article.</h1>
+            </header>
+            <p>Skimming is a quick form of reading targeted at getting the gist of the text, learn how the text is organized, or understand the intention of the writer.</p>
+            <p>You have <span id="timeDivSkim"></span> minutes to skim the next article, after which you will be <b><i>AUTOMATICALLY TRANSFERRED</i></b> to the questions section. </p>
+            <p>Our toolbar on the right will remind you to skim the text, show you amount of time left and allow you to proceed if you are done reading before the allotted time is over. </p>
+            <img class ="imgDone" src="images/skim.png" />
+        </div>
+        <div id="readInstructionsDiv" style="display: none;">
+            <header>
+                <h1>Please read the next article <span style="color: rgb(44, 162, 95);">IN-DEPTH</span>.</h1>
+            </header>
+            <p>You have <span id="timeDivRead"></span> minutes to read the next article in depth, after which you will be <b><i>AUTOMATICALLY TRANSFERRED</i></b> to the questions section. </p>
+            <p>Our toolbar on the right will remind you to read the text in-depth, show you amount of time left and allow you to proceed if you are done reading before the allotted time is over. </p>
+            <img class= "imgDone" src="images/indepth.png" />
+        </div>
+        <div><p></p></div>
+        <div id="navigation">
+            <input type="button" id="btnNext" class="button" value="Ready?">
+        </div>
+        </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+div.read {
+    box-shadow: 0px 0px 50px 20px rgba(44, 162, 95, 0.9);
+    border: 3px solid rgba(44, 162, 95, 1);
+}
+
+span.read {
+    color: rgb(44, 162, 95);
+}
+
+.button.read {
+    background-color: rgb(44, 162, 95);
+}
+
+.button.read.disabled {
+    background-color: gray;
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
+div.skim {
+    box-shadow: 0px 0px 50px 20px rgba(253, 207, 22, 0.9);
+    border: 3px solid rgba(253, 207, 22, 1);
+}
+
+span.skim {
+    color: rgb(253, 207, 22);
+}
+
+.button.skim {
+    background-color: rgb(253, 207, 22);
+}
+
+#expFloat {
+    position: fixed;
+    top:27%;
+    left:88%;
+    width:10%; 
+    height:150px; 
+    font-weight: bold; 
+    background-color: rgba(42, 42, 42, 0.9); 
+    color:#e5e5e5; 
+    font: helvetica;
+    font-size:16px; 
+    vertical-align:center; 
+    text-align: center; 
+    z-index:1000; 
+    display:block; 
+    opacity : 0.9;
+    border-radius: 16px;
+    background-clip: border-box;
+    padding: 20px;
+}
+
+#expFloatAd {
+    position: fixed;
+    top:27%;
+    left:12%;
+    width:10%; 
+    height:150px; 
+    font-weight: bold; 
+    background-color: rgba(42, 42, 42, 0.9); 
+    color:#e5e5e5; 
+    font: helvetica;
+    font-size:16px; 
+    vertical-align:center; 
+    text-align: center; 
+    z-index:1000; 
+    display:block; 
+    opacity : 0.9;
+    border-radius: 16px;
+    background-clip: border-box;
+    padding: 20px;
+}
+
+#clockdiv > span {
+    display: none;
+}
+
+.data_button {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 8px;
+  margin: 0.2em 0em 0.2em;
+  position: relative;
+  color: rgb(255,255,255);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+a.button:hover, a.button:visited {
+  border: 3px solid rgba(0,0,0,0.3);
+  color: rgb(0,0,0);
+}

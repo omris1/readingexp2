@@ -1,0 +1,42 @@
+{
+  "name": "Reading Experiment",
+  "version": "1.1.2",
+  
+  "manifest_version": 2,
+  "description": "Reading Experiment",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "38": "icons/icon-38.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "scripts": [
+      "scripts/jquery-2.2.0.min.js","scripts/firebase.js", "scripts/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.vice.com/*", "https://*.vice.com/*"],
+      "js": ["scripts/jquery-2.2.0.min.js", "scripts/inject.js", "scripts/finetracking.js", "scripts/renderedpage.js"],
+      "css" : ["style/injected-styles.css"]
+    }
+    ],
+  "permissions": [
+    "webRequest",
+    "cookies",
+    "http://*.vice.com/*",
+    "https://*.vice.com/*",
+    "http://ping.chartbeat.net/*",
+    "background",
+    "tabs"
+  ],
+
+  "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'",
+  
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/icon-19.png",
+      "38": "icons/icon-38.png"
+    }
+  }
+}

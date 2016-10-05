@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="style/style.css" rel="stylesheet">
+    <script src="scripts/jquery-2.2.0.min.js"> </script>
+    <script src="scripts/firebase.js"> </script> 
+    <script src="scripts/popup.js"> </script> 
+
+
+  </head>
+  <body>
+    <div id="main_wrapper" class="container">
+        <br>
+        <table>
+        <tr>
+            <td style="margin: auto 0px auto; width: 50%"><img src="images/CULogo187.png"/></td>
+            <td style="margin: auto 0px auto; width: 50%"><img src="images/jacobs-logo-white.png" /></td>
+        </tr>
+        </table>
+        <header>
+            <h1 id ="h1Start">Reading Experiment</h1>
+        </header>
+        <section id="my_marks">
+            <div style="overflow: auto; width:800px; height:200px;" id = "consent">
+                <p class = "consentHeaders">
+                    We are asking you to participate in a research study. This form is designed to give you information about this study. 
+                </p>
+                <p>
+                    <b> Project Title: </b> Understanding reading behaviors in Online News
+                </p>
+                <p>
+                    <b> Principal Investigator:</b> Nir Grinberg, Computer Science, Cornell University nir@cs.cornell.edu
+                </p>
+                <p>
+                    <b>Faculty Advisor: </b> Mor Naaman, Information Science, Cornell University, mor.naaman@cornell.edu
+                </p>
+
+                <p class = "consentBold">What the study is about</p>
+                <p>
+                    The purpose of this research is to understand how people read news articles online. 
+                </p>
+
+                <p class =  "consentBold ">What we will ask you to do</p>
+                <p>
+                    We will ask you to read in-depth or skim eight news articles and answer six questions about each article. The extension will provide instructions, open articles for you, track your interactions with the articles, and record your answers. By the end of the study we will provided instructions for removing the extension.
+                </p>
+
+                <p class = "consentBold"> Risks and discomforts</p>
+                <p>
+                    Emotional stress (possibly when reading under time pressure)
+                </p>
+
+                <p class = "consentBold">Benefits</p>
+                <p>
+                    For the participant, it may be interesting to read the articles included in the study. 
+                    For the society and the scientific community, information from this study may inform the design of better measures of individuals’ attention to news, potentially helping publishers to write more engaging content and helping recommendation systems estimate people’s interests better. 
+                </p>
+                <p class = "consentBold"> Payment for participation</p>
+                <p>
+                    You will be compensated $3 for your participation in the study upon completion of the eight articles.
+                </p>
+
+                <p class = "consentBold">Privacy/Confidentiality </p>
+                <p>
+                    Your privacy is extremely important to us. No personal identifiable information will be collected. All of your answers and page-interaction data will be anonymously stored on our servers and accessed through encrypted channels. We anticipate that your participation in this survey presents no greater risk than everyday use of the Internet.
+                </p>
+
+                <p class = "consentBold">Taking part is voluntary </p>
+                <p>
+                    Your participation in the study is entirely voluntary. As we need a certain diversity of articles from each participant, we will need you to read at least six out of the eight articles provided. 
+                </p>
+
+
+                <p class = "consentBold">If you have questions</p>
+                <p>
+                    The main researcher conducting this study is Nir Grinberg, a graduate student at Cornell University. Please ask any questions you have now. If you have questions later, you may contact Nir Grinberg at nir@cs.cornell.edu. If you have any questions or concerns regarding your rights as a subject in this study, you may contact the Institutional Review Board (IRB) for Human Participants at 607-255-6182 or access their website at http://www.irb.cornell.edu. You may also report your concerns or complaints anonymously through Ethicspoint online at www.hotline.cornell.edu or by calling toll free at 1-866-293-3077. Ethicspoint is an independent organization that serves as a liaison between the University and the person bringing the complaint so that anonymity can be ensured.
+                </p>
+
+            </div>
+            <br>
+            <div id ="initialsBox">
+                <form>
+                  <u>Statement of Consent</u>
+                  <br>
+                  I have read the above information, and I consent to take part in the study. 
+                  <br>
+                  Initials: <input type="text" id="initials" placenolder = "Initials">
+                  <br><br>
+                <form> 
+            </div>
+
+            <div id="exp_navigation">
+                <input type="button" id="main_driver" class="button" value="Start">
+            </div>
+            
+
+        </section>
+    </div>
+  </body>
+</html>
