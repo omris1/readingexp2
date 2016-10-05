@@ -64,12 +64,12 @@ var qualDuration = -1;
 var currentArticleIndex = 0;
 var participantWordPerSec = 0;
 Firebase.enableLogging(true);
-var myFirebaseRef = new Firebase("https://longreads.firebaseio.com/");
-
+// var myFirebaseRef = new Firebase("https://longreads.firebaseio.com/");
+var myFirebaseRef =  new Firebase("https://longreads2.firebaseio.com/");
 // var myFirebaseRef3= new Firebase("https://longreads.firebaseio.com/participant_data");
 // var myFirebaseRef3= new Firebase("https://longreads.firebaseio.com/mturk__data");
-var myFirebaseRef3= new Firebase("https://longreads.firebaseio.com/mturk__data_contigency");
-
+// var myFirebaseRef3= new Firebase("https://longreads.firebaseio.com/mturk__data_contigency");
+var myFirebaseRef3 = new Firebase("https://longreads2.firebaseio.com/");
 
 var pInfo = "saving data from background page";
 var lastQualSent = false;
