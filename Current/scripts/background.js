@@ -400,52 +400,34 @@ function checkCorrectAnswers() {
               "did_finish_exp" : "no",
               "disqualified" : "no"
             });
-
-          qualified = true;
-          // nextURL = "instuctions.html"
-          chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
-              chrome.tabs.update(tabId, {url: "instuctions.html"});
-          });
-
-
           // if (totalQualCorrect > 3 && reading_speed > 1.6 && hasChartBeatPings == true){
           //   userRef.child("state").update({
           //     "did_finish_exp" : "no",
           //     "disqualified" : "no"
           //   });
-          //   qualified = true;
-          //   // nextURL = "qual_break.html";
-          //   nextURL = "instuctions.html"
-          //   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
-          //       chrome.tabs.update(tabId, {url: nextURL});
-          //   });
+            qualified = true;
+            nextURL = "instructions.html";
+            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
+                chrome.tabs.update(tabId, {url: nextURL});
+            });
           // }else{
-          //   nextURL = "instuctions.html";
-          //   qualified = true; 
           //   console.log("participant NOT viable");
           //   userRef.child("state").update({
-          //     "did_finish_exp" : "no",
-          //     "disqualified" : "no"
+          //     "did_finish_exp" : "yes",
+          //     "disqualified" : "yes"
           //   });
-          //   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
-          //       chrome.tabs.update(tabId, {url: nextURL});
-          //   });
-            // userRef.child("state").update({
-            //   "did_finish_exp" : "yes",
-            //   "disqualified" : "yes"
-            // });
-            // sendFinalPage();
+          //   sendFinalPage();
 
 
-            });
-          }
+            //sendFinalPage();
+          // }
           // nextURL = "qual_break.html";
           // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
           //     chrome.tabs.update(tabId, {url: nextURL});
           // });
 
-        // });
-      // }
+        });
+      }
       catch(error) {  
           console.log("there was an error in get reading speed");
       }
@@ -455,7 +437,6 @@ function checkCorrectAnswers() {
     console.log("there was an error in FBCalcTotalNumQualCorrect ");
   }
 }
-
 
 function sendCondition() {
   currentIdx = exp_articles[currentArticleIndex]["condition"];
