@@ -7,8 +7,8 @@
     <script src="scripts/demograph.js"> </script>  
   </head>
   <body>
-    <div id="main_wrapper" class="container">
-    <h2> Before you get started, please tell us a little about your background</h2>
+    <div id="demograph"  class="container" >
+    <h3> Before you get started, please tell us a little about your background</h3>
     <form>
       What is your age?<br>
       <select id="age">
@@ -40,6 +40,17 @@
         <option value="Professional">Professional Degree</option>
       </select>
       <br><br>
+      Can you tell us about your reading disability?<br>
+      <textarea cols="40" rows="5" id="disability" ></textarea>
+      <br><br>
+      What is your diagnosis<br>
+      <textarea cols="40" rows="1" id="diagnosis" ></textarea>
+      <br><br>
+       Do you use any assistive technology when you read online articles? 
+       <br>If yes, then which technologies?
+       <br>
+      <textarea cols="40" rows="5" id="assist_tech" ></textarea>
+      <br>
       <input type="button" id="demographQ"  value="Submit">
     </form>
         

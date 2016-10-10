@@ -473,7 +473,7 @@ function sendCondition() {
 
 
 
-function userQuestions(readingTechnique){
+function userQuestions(readingTechnique, assist_tech_used){
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     nextURL = "final.html"
     // chrome.tabs.update(tabs[0].id, {url: nextURL});
@@ -481,18 +481,22 @@ function userQuestions(readingTechnique){
   });
   var userRef = myFirebaseRef3.child(uid);
   userRef.child("Demographic-Questions").update({
-    "Skimming Technique" : readingTechnique
+    "Skimming Technique" : readingTechnique,
+    "Assistive_tech_used" : assist_tech_used
   });
   saveDidFinishState();
 
 }
 
-function FBAppendDemographQuest(age, gender, education){
+function FBAppendDemographQuest(age, gender, education, disability, diagnosis, assist_tech){
   var userRef = myFirebaseRef3.child(uid);
   userRef.child("Begin-Demographic-Questions").update({
     "Age" : age,
     "Gender" : gender,
-    "Education": education
+    "Education": education,
+    "Disability" : disability,
+    "Diagnosis" : diagnosis,
+    "Assitive_technology" : assist_tech
   });
 
 }
@@ -787,13 +791,17 @@ chrome.runtime.onMessage.addListener(
           qualDuration = request.duration;
 
           var readingTechnique = request.readingTechnique;
-          userQuestions(readingTechnique);
+          var assist_tech_used = request.assist_tech_used;
+          userQuestions(readingTechnique, assist_tech_used);
         }
         if (request.msg == "save_demograph_quest") {
           var age = request.age;
           var gender = request.gender;
           var education = request.education;
-          FBAppendDemographQuest(age, gender, education)
+          var disability = request.disability;
+          var diagnosis = request.diagnosis;
+          var assist_tech = request.assist_tech;
+          FBAppendDemographQuest(age, gender, education, disability, diagnosis, assist_tech)
         }
 
         if (request.msg == "get_user_id") {
