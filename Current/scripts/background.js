@@ -396,27 +396,31 @@ function checkCorrectAnswers() {
           participantWordPerSec = parseFloat(snapshot.val());
           console.log("words per sec queried from Fb: " + JSON.stringify(participantWordPerSec));
           reading_speed = participantWordPerSec;
-          if (totalQualCorrect > 3 && reading_speed > 1.6 && hasChartBeatPings == true){
-            userRef.child("state").update({
+          userRef.child("state").update({
               "did_finish_exp" : "no",
               "disqualified" : "no"
             });
+          // if (totalQualCorrect > 3 && reading_speed > 1.6 && hasChartBeatPings == true){
+          //   userRef.child("state").update({
+          //     "did_finish_exp" : "no",
+          //     "disqualified" : "no"
+          //   });
             qualified = true;
-            nextURL = "qual_break.html";
+            nextURL = "instructions.html";
             chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
                 chrome.tabs.update(tabId, {url: nextURL});
             });
-          }else{
-            console.log("participant NOT viable");
-            userRef.child("state").update({
-              "did_finish_exp" : "yes",
-              "disqualified" : "yes"
-            });
-            sendFinalPage();
+          // }else{
+          //   console.log("participant NOT viable");
+          //   userRef.child("state").update({
+          //     "did_finish_exp" : "yes",
+          //     "disqualified" : "yes"
+          //   });
+          //   sendFinalPage();
 
 
             //sendFinalPage();
-          }
+          // }
           // nextURL = "qual_break.html";
           // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
           //     chrome.tabs.update(tabId, {url: nextURL});
