@@ -24,14 +24,14 @@ chrome.runtime.onMessage.addListener(
       div_sel = '#firstInstructionsDiv';
     } else if (request.cond == "read") {
       div_sel = '#readInstructionsDiv';
-      var clock = document.getElementById("timeDivRead");
-      clock.innerHTML = request.minutes + ":" + ("00" + Math.floor(request.seconds)).substr(-2,2);
-      console.log("received time: " + request.minutes + ":" + request.seconds);
+      // var clock = document.getElementById("timeDivRead");
+      // clock.innerHTML = request.minutes + ":" + ("00" + Math.floor(request.seconds)).substr(-2,2);
+      // console.log("received time: " + request.minutes + ":" + request.seconds);
     } else if (request.cond == "skim") {
       div_sel = '#skimInstructionsDiv';
-      var clock = document.getElementById("timeDivSkim");
-      clock.innerHTML = request.minutes + ":" + ("00" + Math.floor(request.seconds)).substr(-2,2);
-      console.log("received time: " + request.minutes + ":" + request.seconds);
+      // var clock = document.getElementById("timeDivSkim");
+      // clock.innerHTML = request.minutes + ":" + ("00" + Math.floor(request.seconds)).substr(-2,2);
+      // console.log("received time: " + request.minutes + ":" + request.seconds);
 	  } else if (request.cond == "questions") {
       div_sel = '#questionsInstructionsDiv';
     }
