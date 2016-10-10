@@ -24,7 +24,7 @@ function initializeClock(id, endtime){
     clock.text(minutes + ":" + ("00" + seconds).substr(-2,2));
     if(t<=0){
       clearInterval(timeinterval);
-      chrome.runtime.sendMessage({msg: "timerEnd", duration: articleDuration}, function(response) { });
+//       chrome.runtime.sendMessage({msg: "timerEnd", duration: articleDuration}, function(response) { });
     }
   }
   updateClock(); // run function once at first to avoid delay
@@ -73,7 +73,7 @@ function createTimer(requiredMinutes, requiredSeconds) {
 function createFloatingDiv() {
   $('body').append('<div id="expFloat">'+
                     '<div id="condDiv"><span id="condReminder"></span><br><div>' +
-                    '<div id="clockdiv"><span></span></div>' + 
+//                     '<div id="clockdiv"><span></span></div>' + 
                     '<a href="#" id="btnDone" class="button"><span>✓</span>&nbsp;Done</a>' +
                 '</div>');
   $('#btnDone').on('click', buttonClick);
