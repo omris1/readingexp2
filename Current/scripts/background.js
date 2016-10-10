@@ -396,34 +396,56 @@ function checkCorrectAnswers() {
           participantWordPerSec = parseFloat(snapshot.val());
           console.log("words per sec queried from Fb: " + JSON.stringify(participantWordPerSec));
           reading_speed = participantWordPerSec;
-          if (totalQualCorrect > 3 && reading_speed > 1.6 && hasChartBeatPings == true){
-            userRef.child("state").update({
+          userRef.child("state").update({
               "did_finish_exp" : "no",
               "disqualified" : "no"
             });
-            qualified = true;
-            nextURL = "qual_break.html";
-            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
-                chrome.tabs.update(tabId, {url: nextURL});
-            });
-          }else{
-            console.log("participant NOT viable");
-            userRef.child("state").update({
-              "did_finish_exp" : "yes",
-              "disqualified" : "yes"
-            });
-            sendFinalPage();
+
+          qualified = true;
+          // nextURL = "instuctions.html"
+          chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
+              chrome.tabs.update(tabId, {url: "instuctions.html"});
+          });
 
 
-            //sendFinalPage();
+          // if (totalQualCorrect > 3 && reading_speed > 1.6 && hasChartBeatPings == true){
+          //   userRef.child("state").update({
+          //     "did_finish_exp" : "no",
+          //     "disqualified" : "no"
+          //   });
+          //   qualified = true;
+          //   // nextURL = "qual_break.html";
+          //   nextURL = "instuctions.html"
+          //   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
+          //       chrome.tabs.update(tabId, {url: nextURL});
+          //   });
+          // }else{
+          //   nextURL = "instuctions.html";
+          //   qualified = true; 
+          //   console.log("participant NOT viable");
+          //   userRef.child("state").update({
+          //     "did_finish_exp" : "no",
+          //     "disqualified" : "no"
+          //   });
+          //   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
+          //       chrome.tabs.update(tabId, {url: nextURL});
+          //   });
+            // userRef.child("state").update({
+            //   "did_finish_exp" : "yes",
+            //   "disqualified" : "yes"
+            // });
+            // sendFinalPage();
+
+
+            });
           }
           // nextURL = "qual_break.html";
           // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { 
           //     chrome.tabs.update(tabId, {url: nextURL});
           // });
 
-        });
-      }
+        // });
+      // }
       catch(error) {  
           console.log("there was an error in get reading speed");
       }
